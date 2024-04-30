@@ -8,7 +8,9 @@ function HomeScreen({navigation}){
                 title="Logar"
                 onPress={()=>navigation.navigate('login')}
             />
-            <Button title="Criar Conta"/>
+            <Button title="Criar Conta"
+                onPress={()=>navigation.navigate("app")}
+            />
         </View>
     )
 }

@@ -1,6 +1,5 @@
 import { View, Text, TextInput, StyleSheet, Button} from "react-native"
-
-function AppScreen (){
+function HomeAppScreen (){
 
     return(
         <View>
@@ -9,4 +8,4 @@ function AppScreen (){
     )
 }
 
-export default AppScreen;
+export default HomeAppScreen;
