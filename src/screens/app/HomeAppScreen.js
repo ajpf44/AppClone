@@ -6,14 +6,14 @@ import {
 import { useState } from "react";
 
 import AppHeaderNav from "../../components/AppHeaderNav";
-import ContinueWatching from "../../components/homeScreen/ContinueWatchingMedia";
+import ContinueWatchingMedia from "../../components/homeScreen/ContinueWatchingMedia";
 
 function HomeAppScreen() {
     const [select, setSelect] = useState("all");
     return (
         <View style={styles.container}>
             <AppHeaderNav active={select} setSelect={setSelect} />
-            <ContinueWatching />
+            <ContinueWatchingMedia />
         </View>
     );
 }

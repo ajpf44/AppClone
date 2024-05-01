@@ -9,7 +9,7 @@ import {
 
 import continueWatchingImages from "../../data/continueWatchingImages";
 
-function ContinueWatching() {
+function ContinueWatchingMedia() {
     return (
         <View style={styles.container}>
             <Text style={styles.titleSection}>Continuar Assistindo</Text>
@@ -55,4 +55,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ContinueWatching;
+export default ContinueWatchingMedia;
