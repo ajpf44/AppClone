@@ -1,9 +1,17 @@
-import { View, Text, TextInput, StyleSheet, Button} from "react-native"
-function HomeAppScreen (){
+import { View, Text, TextInput, StyleSheet, Button, FlatList} from "react-native"
 
+import { useState } from "react";
+
+import AppHeaderNav from "../../components/AppHeaderNav";
+
+function HomeAppScreen (){
+    const [select, setSelect] = useState("all");
     return(
         <View>
-            <Text>Página principal</Text>
+            <AppHeaderNav active={select} setSelect={setSelect}></AppHeaderNav>
+            <FlatList>
+                
+            </FlatList>
         </View>
     )
 }

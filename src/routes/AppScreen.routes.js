@@ -6,12 +6,14 @@ import { AntDesign } from "@expo/vector-icons";
 import HomeAppScreen from "../screens/app/HomeAppScreen";
 import AppHeaderBarLogo from "../components/AppHeaderBarLogo";
 import AppHeaderBarRight from "../components/AppHeaderBarRight";
+import StoreAppScreen from "../screens/app/StoreAppScreen";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
 function AppRoutes() {
     return (
         <Navigator>
+            
             <Screen
                 name="HomeApp"
                 component={HomeAppScreen}
@@ -26,7 +28,7 @@ function AppRoutes() {
             />
             <Screen
                 name="Store"
-                component={HomeAppScreen}
+                component={StoreAppScreen}
                 options={{
                     title: "Store",
                     tabBarIcon: ({ size, color }) => (
@@ -36,6 +38,9 @@ function AppRoutes() {
                             color="black"
                         />
                     ),
+                    headerTitle: () => <AppHeaderBarLogo />,
+                    headerRight: () => <AppHeaderBarRight />,
+                    headerStyle: styles.header,
                 }}
             />
             <Screen
