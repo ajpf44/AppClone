@@ -1,23 +1,23 @@
 import {
     View,
     FlatList,
-    Text,
     StyleSheet,
     Image,
     TouchableOpacity,
+    Dimensions
 } from "react-native";
 
-import continueWatchingImages from "../../data/continueWatchingImages";
+import BigSuggestionImages from "../../data/bigSuggestionImages";
 
-function ContinueWatchingMedia() {
+function BigSuggestionMedia() {
     return (
         <View style={styles.container}>
-            <Text style={styles.titleSection}>Continuar Assistindo</Text>
             <FlatList
-                data={continueWatchingImages}
+                data={BigSuggestionImages}
                 renderItem={({ item }) => <ItemMedia img={item.img} />}
                 keyExtractor={(item) => item.id}
                 horizontal={true}
+                pagingEnabled
             ></FlatList>
         </View>
     );
@@ -32,27 +32,18 @@ const ItemMedia = ({ img }) => (
     </TouchableOpacity>
 );
 
+const {width} = Dimensions.get("window")
 const styles = StyleSheet.create({
     container: {
-        gap: 2,
-        paddingHorizontal: 10,
-    },
-    titleSection: {
-        fontSize: 16,
-        fontWeight: "bold",
-        color: "white",
-        marginLeft: 10,
+        marginBottom: 20
     },
     item: {
-        backgroundColor: "#1a98ff",
-        marginHorizontal: 5,
-        borderRadius: 10,
+        backgroundColor: "#1a98ff",        
     },
     image: {
-        width: 200,
-        height: 120,
-        borderRadius: 10,
+        width: width,
+        height: 200,
     },
 });
 
-export default ContinueWatchingMedia;
+export default BigSuggestionMedia;
