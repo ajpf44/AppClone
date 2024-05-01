@@ -13,17 +13,17 @@ const { Navigator, Screen } = createBottomTabNavigator();
 function AppRoutes() {
     return (
         <Navigator>
-            
             <Screen
                 name="HomeApp"
                 component={HomeAppScreen}
                 options={{
                     tabBarIcon: ({ size, color }) => (
-                        <AntDesign name="home" size={24} color="black" />
+                        <AntDesign name="home" size={24} color="white" />
                     ),
                     headerTitle: () => <AppHeaderBarLogo />,
                     headerRight: () => <AppHeaderBarRight />,
                     headerStyle: styles.header,
+                    tabBarStyle: styles.tabBar,
                 }}
             />
             <Screen
@@ -35,7 +35,7 @@ function AppRoutes() {
                         <AntDesign
                             name="shoppingcart"
                             size={24}
-                            color="black"
+                            color="white"
                         />
                     ),
                     headerTitle: () => <AppHeaderBarLogo />,
@@ -49,7 +49,7 @@ function AppRoutes() {
                 options={{
                     title: "Live TV",
                     tabBarIcon: ({ size, color }) => (
-                        <AntDesign name="videocamera" size={24} color="black" />
+                        <AntDesign name="videocamera" size={24} color="white" />
                     ),
                 }}
             />
@@ -59,7 +59,7 @@ function AppRoutes() {
                 options={{
                     title: "Downloads",
                     tabBarIcon: ({ size, color }) => (
-                        <AntDesign name="download" size={24} color="black" />
+                        <AntDesign name="download" size={24} color="white" />
                     ),
                 }}
             />
@@ -69,7 +69,7 @@ function AppRoutes() {
                 options={{
                     title: "Search",
                     tabBarIcon: ({ size, color }) => (
-                        <AntDesign name="search1" size={24} color="black" />
+                        <AntDesign name="search1" size={24} color="white" />
                     ),
                 }}
             />
@@ -79,6 +79,9 @@ function AppRoutes() {
 
 const styles = StyleSheet.create({
     header: {
+        backgroundColor: "black",
+    },
+    tabBar: {
         backgroundColor: "black",
     },
 });
