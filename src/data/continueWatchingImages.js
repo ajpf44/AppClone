@@ -1,4 +1,4 @@
-const MOVIES=[
+const continueWatchingImages=[
     {
         id: 1,
         name: "The Boys",
@@ -46,4 +46,4 @@ const MOVIES=[
     }
 ]
 
-export default MOVIES;
+export default continueWatchingImages;
