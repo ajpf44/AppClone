@@ -30,7 +30,7 @@ function Stack() {
             />
             <Screen name="about" component={AboutScreen} 
                 options={{
-                    headerTitle: "Login",
+                    headerTitle: "Sobre",
                     headerStyle: styles.header,
                     headerTintColor: "white"
                 }}
