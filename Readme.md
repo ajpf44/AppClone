@@ -13,6 +13,9 @@ Este projeto é um clone do aplicativo Prime Video da Amazon, desenvolvido como 
 - Tela Home, com exposição de alguns obras cinematográficas por meio de listas
 - Tela Pesquisa, com campo de pesquisa funcional
 
+### Comparação com o App Orignal
+| ![print do App Clone](assets/appClone.jpg) | ![print do App Original](assets/appOriginal.jpg) |
+
 ### Como Usar:
 1. **Clone o repositório:**
     ```bash
