@@ -7,9 +7,12 @@ npx expo install react-native-screens react-native-safe-area-context
 para o bottom-tabs
 npm install @react-navigation/bottom-tabs
 
-
 doc estilização do bottom tabs
 https://reactnavigation.org/docs/bottom-tab-navigator/
 
+doc flatlist
+https://reactnative.dev/docs/flatlist?language=javascript#getitemlayout
+
 Como fazer o primeiro elemento da página principal do app
 https://stackoverflow.com/questions/70917826/how-to-show-only-one-item-at-a-time-in-react-natives-flatlists
+

@@ -7,17 +7,16 @@ import {
     TouchableOpacity,
 } from "react-native";
 
-import continueWatchingImages from "../../data/continueWatchingImages";
-
-function ContinueWatchingMedia() {
+function BaseMediaList(props) {
     return (
         <View style={styles.container}>
-            <Text style={styles.titleSection}>Continuar Assistindo</Text>
+            <Text style={styles.titleSection}>{props.tittle}</Text>
             <FlatList
-                data={continueWatchingImages}
+                data={props.data}
                 renderItem={({ item }) => <ItemMedia img={item.img} />}
                 keyExtractor={(item) => item.id}
                 horizontal={true}
+                inverted={props.inverted==true}
             ></FlatList>
         </View>
     );
@@ -55,4 +54,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ContinueWatchingMedia;
+export default BaseMediaList;

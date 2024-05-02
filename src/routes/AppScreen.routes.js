@@ -4,9 +4,11 @@ import { StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
 import HomeAppScreen from "../screens/app/HomeAppScreen";
+import StoreAppScreen from "../screens/app/StoreAppScreen";
+import DownloadsAppScreen from "../screens/app/DownloadsAppScreen";
+
 import AppHeaderBarLogo from "../components/AppHeaderBarLogo";
 import AppHeaderBarRight from "../components/AppHeaderBarRight";
-import StoreAppScreen from "../screens/app/StoreAppScreen";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -38,9 +40,10 @@ function AppRoutes() {
                             color="white"
                         />
                     ),
-                    headerTitle: () => <AppHeaderBarLogo />,
                     headerRight: () => <AppHeaderBarRight />,
                     headerStyle: styles.header,
+                    tabBarStyle: styles.tabBar,
+                    headerTitleStyle: styles.standardTitle
                 }}
             />
             <Screen
@@ -51,16 +54,24 @@ function AppRoutes() {
                     tabBarIcon: ({ size, color }) => (
                         <AntDesign name="videocamera" size={24} color="white" />
                     ),
+                    headerRight: () => <AppHeaderBarRight />,
+                    headerStyle: styles.header,
+                    tabBarStyle: styles.tabBar,
+                    headerTitleStyle: styles.standardTitle
                 }}
             />
             <Screen
                 name="Downloads"
-                component={HomeAppScreen}
+                component={DownloadsAppScreen}
                 options={{
                     title: "Downloads",
                     tabBarIcon: ({ size, color }) => (
                         <AntDesign name="download" size={24} color="white" />
                     ),
+                    headerRight: () => <AppHeaderBarRight />,
+                    headerStyle: styles.header,
+                    tabBarStyle: styles.tabBar,
+                    headerTitleStyle: styles.standardTitle
                 }}
             />
             <Screen
@@ -84,6 +95,9 @@ const styles = StyleSheet.create({
     tabBar: {
         backgroundColor: "black",
     },
+    standardTitle: {
+        color: "#fff"
+    }
 });
 
 export default AppRoutes;

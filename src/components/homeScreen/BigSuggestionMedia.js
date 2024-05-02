@@ -6,10 +6,12 @@ import {
     TouchableOpacity,
     Dimensions
 } from "react-native";
+import { useEffect, useState } from "react";
 
 import BigSuggestionImages from "../../data/bigSuggestionImages";
 
 function BigSuggestionMedia() {
+
     return (
         <View style={styles.container}>
             <FlatList
@@ -18,6 +20,9 @@ function BigSuggestionMedia() {
                 keyExtractor={(item) => item.id}
                 horizontal={true}
                 pagingEnabled
+                onViewableItemsChanged={({changed, viewableItems})=>{
+                    console.log(viewableItems[0].key)
+                }}
             ></FlatList>
         </View>
     );
@@ -26,7 +31,6 @@ function BigSuggestionMedia() {
 const ItemMedia = ({ img }) => (
     <TouchableOpacity>
         <View style={styles.item}>
-            {/* <Text style={styles.name}>{name}</Text> */}
             <Image style={styles.image} source={img} />
         </View>
     </TouchableOpacity>
@@ -35,7 +39,6 @@ const ItemMedia = ({ img }) => (
 const {width} = Dimensions.get("window")
 const styles = StyleSheet.create({
     container: {
-        marginBottom: 20
     },
     item: {
         backgroundColor: "#1a98ff",        
