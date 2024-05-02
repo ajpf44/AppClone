@@ -6,6 +6,7 @@ import { AntDesign } from '@expo/vector-icons';
 import LoginScreen from "../screens/LoginScreen";
 import HomeScreen from "../screens/HomeScreen";
 import AppRoutes from "./AppScreen.routes";
+import AboutScreen from "../screens/AboutScreen";
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -26,6 +27,13 @@ function Stack() {
                 name="app"
                 component={AppRoutes}
                 options={{ headerShown: false }}
+            />
+            <Screen name="about" component={AboutScreen} 
+                options={{
+                    headerTitle: "Login",
+                    headerStyle: styles.header,
+                    headerTintColor: "white"
+                }}
             />
         </Navigator>
     );

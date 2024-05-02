@@ -19,6 +19,8 @@ function HomeScreen({navigation}){
                 <Button 
                     title="Sobre"
                     color="#1aff"
+
+                    onPress={()=>navigation.navigate("about")}
                 />
             </View>
         </View>
