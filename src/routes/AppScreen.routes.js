@@ -10,6 +10,7 @@ import DownloadsAppScreen from "../screens/app/DownloadsAppScreen";
 import AppHeaderBarLogo from "../components/AppHeaderBarLogo";
 import AppHeaderBarRight from "../components/AppHeaderBarRight";
 import LiveTvAppScreen from "../screens/app/LiveTvAppScreen";
+import SearchTvAppScreen from "../screens/app/SearchAppScreen";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -77,12 +78,16 @@ function AppRoutes() {
             />
             <Screen
                 name="Search"
-                component={HomeAppScreen}
+                component={SearchTvAppScreen}
                 options={{
                     title: "Search",
                     tabBarIcon: ({ size, color }) => (
                         <AntDesign name="search1" size={24} color="white" />
                     ),
+                    headerRight: () => <AppHeaderBarRight />,
+                    headerStyle: styles.header,
+                    tabBarStyle: styles.tabBar,
+                    headerTitleStyle: styles.standardTitle
                 }}
             />
         </Navigator>
