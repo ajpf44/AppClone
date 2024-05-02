@@ -14,7 +14,15 @@ Este projeto é um clone do aplicativo Prime Video da Amazon, desenvolvido como 
 - Tela Pesquisa, com campo de pesquisa funcional
 
 ### Comparação com o App Orignal
-| ![print do App Clone](assets/appClone.jpg) | ![print do App Original](assets/appOriginal.jpg) |
+
+<div style="display: flex; flex-direction: row">
+<div style="width: 200px;">
+    ![print do App Clone](assets/appClone.jpg)
+</div>
+<div style="width: 200px;">
+    ![print do App Original](assets/appOriginal.jpg)
+</div>
+
 
 ### Como Usar:
 1. **Clone o repositório:**
