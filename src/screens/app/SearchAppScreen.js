@@ -34,9 +34,11 @@ const execSearch = (str) => {
                 movieNameSearch.includes(strToSearch) ||
                 strToSearch.includes(movieNameSearch)
             ) {
-                //VERIFICA SE O FILME JÁ FOI INSERIDO NO ARRAY FOUNDMOVIES
-                //ESSA VERIFICAÇÃO TEM QUE OCORRER POR QUE TEM REDUNUNCIA NOS FILMES
-                //DOIS DATAS PODEM TER O MESMO FILME
+                /*
+                VERIFICA SE O FILME JÁ FOI INSERIDO NO ARRAY FOUNDMOVIES
+                ESSA VERIFICAÇÃO TEM QUE OCORRER POR QUE EXISTE REDUNDANCIA NOS FILMES
+                DOIS DATAS PODEM TER O MESMO FILME
+                */
                 if (!foundMovies.includes(movie.name)) {
                     movie.id = foundMovies.length;
                     foundMovies.push(movie);
