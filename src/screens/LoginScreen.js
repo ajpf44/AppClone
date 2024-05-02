@@ -50,10 +50,6 @@ function LoginScreen({ navigation }) {
             <View style={styles.loginButton}>
                 <Button
                     title="Logar"
-                    onLongPress={() => {
-                        console.log("long press");
-                        navigation.navigate("app");
-                    }}
                     onPress={async () => {
                         const successfulLogin = verifyLogin(
                             inputEmail,
