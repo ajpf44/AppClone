@@ -9,6 +9,7 @@ import DownloadsAppScreen from "../screens/app/DownloadsAppScreen";
 
 import AppHeaderBarLogo from "../components/AppHeaderBarLogo";
 import AppHeaderBarRight from "../components/AppHeaderBarRight";
+import LiveTvAppScreen from "../screens/app/LiveTvAppScreen";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -48,7 +49,7 @@ function AppRoutes() {
             />
             <Screen
                 name="Live TV"
-                component={HomeAppScreen}
+                component={LiveTvAppScreen}
                 options={{
                     title: "Live TV",
                     tabBarIcon: ({ size, color }) => (

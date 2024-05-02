@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 
-function StoreAppScreen() {
+function LiveTvAppScreen() {
     
     return (
         <View style={styles.container}>
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
         fontWeight:'bold'
     }
 })
-export default StoreAppScreen;
+export default LiveTvAppScreen;
