@@ -1,13 +1,19 @@
-import { View, Text, TextInput, StyleSheet, Button, Pressable } from "react-native";
+import {
+    View,
+    Text,
+    TextInput,
+    StyleSheet,
+    Button,
+    Pressable,
+} from "react-native";
 import { useState } from "react";
+
+import blueColor from "../components/blueColor";
 
 const [email, senha] = ["ajpf44@gmail.com", "1234"];
 
-function doLogin(nav, inputEmail, inputSenha) {
+function verifyLogin(inputEmail, inputSenha) {
     if (inputSenha == senha && inputEmail == email) {
-        console.log("aqui");
-        nav.navigate("app");
-
         return true;
     }
 
@@ -23,18 +29,18 @@ function LoginScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.inputContainer}>
-                <Text>Email: </Text>
+                <Text style={styles.inputTitle}>Email: </Text>
                 <TextInput
-                    placeholder="Olá mundo"
+                    placeholder="ajpf44@gmail.com"
                     style={styles.inputs}
                     autoComplete="email"
                     onChangeText={setInputEmail}
                 />
             </View>
             <View style={styles.inputContainer}>
-                <Text>Senha: </Text>
+                <Text style={styles.inputTitle}>Senha: </Text>
                 <TextInput
-                    placeholder="Olá mundo"
+                    placeholder="1234"
                     style={styles.inputs}
                     secureTextEntry
                     onChangeText={setInputSenha}
@@ -44,33 +50,35 @@ function LoginScreen({ navigation }) {
             <View style={styles.loginButton}>
                 <Button
                     title="Logar"
-                    
                     onLongPress={() => {
                         console.log("long press");
                         navigation.navigate("app");
                     }}
-                    onPress={() => {
-                        const successfulLogin = doLogin(
-                            navigation,
-                            `${inputEmail}`,
+                    onPress={async () => {
+                        const successfulLogin = verifyLogin(
+                            inputEmail,
                             inputSenha
                         );
 
-                        if (successfulLogin) setLoginStatus(true);
-                        else setLoginStatus(false);
+                        if (successfulLogin) {
+                            console.log("sucessfull Login");
+                            setLoginStatus(true);
+                            navigation.navigate("app");
+                        } else setLoginStatus(false);
                     }}
                 />
             </View>
 
             <View style={styles.loginButton}>
                 <Pressable
-                    delayLongPress={2000}
+                    delayLongPress={1000}
                     onLongPress={() => {
-                        console.log("long press");
                         navigation.navigate("app");
                     }}
                 >
-                    <Text>Não tem conta? Cadastre-se</Text>
+                    <Text style={styles.inputTitle}>
+                        Não tem conta? Cadastre-se
+                    </Text>
                 </Pressable>
             </View>
 
@@ -86,19 +94,23 @@ const widthElements = "60%";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#ddd",
+        backgroundColor: "black",
         alignItems: "center",
         justifyContent: "center",
         gap: 10,
     },
     inputs: {
         backgroundColor: "#fff",
-        borderColor: "black",
+        borderColor: blueColor,
         borderWidth: 1,
         paddingHorizontal: 4,
     },
     inputContainer: {
         width: widthElements,
+        gap: 3,
+    },
+    inputTitle: {
+        color: "white",
     },
     loginButton: {
         width: widthElements,
@@ -109,7 +121,7 @@ const styles = StyleSheet.create({
     },
     loginStatus: {
         color: "red",
-        alignSelf: 'flex-start'
+        alignSelf: "flex-start",
     },
 });
 

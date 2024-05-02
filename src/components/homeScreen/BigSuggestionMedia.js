@@ -20,9 +20,10 @@ function BigSuggestionMedia() {
                 keyExtractor={(item) => item.id}
                 horizontal={true}
                 pagingEnabled
-                onViewableItemsChanged={({changed, viewableItems})=>{
-                    console.log(viewableItems[0].key)
-                }}
+                // tentaiva de fazer trocar automático
+                // onViewableItemsChanged={({changed, viewableItems})=>{
+                //     console.log(viewableItems[0].key)
+                // }}
             ></FlatList>
         </View>
     );
