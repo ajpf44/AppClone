@@ -17,14 +17,9 @@ Este projeto é um clone do aplicativo Prime Video da Amazon, desenvolvido como 
 
 ### Comparação com o App Orignal
 
-<div>
-    <div style="width: 200px;">
-        ![print do App Clone](assets/appClone.jpg)
-    </div>
-    <div style="width: 200px;">
-        ![print do App Original](assets/appOriginal.jpg)
-    </div>
-</div>
+|                 App Clone                  |                   App Original                   |
+| :----------------------------------------: | :----------------------------------------------: |
+| ![print do App Clone](assets/appClone.jpg) | ![print do App Original](assets/appOriginal.jpg) |
 
 ### Como Usar:
 
